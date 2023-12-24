@@ -1,14 +1,20 @@
-﻿Musica musica1 = new Musica();
-musica1.Nome = "In Constant Sorrow";
-musica1.Artista = "SuicideBoys";
-musica1.Duracao = 255;
-musica1.Disponivel = true;
-musica1.ExibirFichaTecnica();
+﻿Banda leall = new Banda();
+leall.Nome = "LEALL";
+
+Album albumDoLeall = new Album();
+albumDoLeall.Nome = "Eu Ainda Tenho Coração";
+
+Musica musica1 = new Musica(leall);
+musica1.Nome = "Eu ainda Tenho Coração";
+musica1.Duracao = 201;
+
+Musica musica2 = new Musica(leall);
+musica2.Nome = "Medo de Quase Nada";
+musica2.Duracao = 245;
+
+albumDoLeall.AdicionarMusica(musica1);
+albumDoLeall.AdicionarMusica(musica2);
 
 
-Musica musica2 = new Musica();
-musica2.Nome = "Onde que nós taria";
-musica2.Artista = "LEALL";
-musica2.Duracao = 250;
-musica2.Disponivel = false;
-musica2.ExibirFichaTecnica();
+leall.AdidicionarAlbum(albumDoLeall);
+leall.ExibirDiscografia();
