@@ -1,20 +1,21 @@
-﻿Banda leall = new Banda();
-leall.Nome = "LEALL";
+﻿Banda leall = new Banda("LEALL");
 
-Album albumDoLeall = new Album();
-albumDoLeall.Nome = "Eu Ainda Tenho Coração";
+Album albumDoLeall = new Album("Eu Ainda Tenho Coração");
 
-Musica musica1 = new Musica(leall);
-musica1.Nome = "Eu ainda Tenho Coração";
-musica1.Duracao = 201;
+Musica musica1 = new Musica(leall, "Eu ainda Tenho Coração")
+{
+    Duracao = 201,
+    Disponivel = true,
+};
 
-Musica musica2 = new Musica(leall);
-musica2.Nome = "Medo de Quase Nada";
-musica2.Duracao = 245;
+Musica musica2 = new Musica(leall, "Medo de Quase Nada")
+{
+    Duracao = 245,
+    Disponivel = true,
+};
 
 albumDoLeall.AdicionarMusica(musica1);
 albumDoLeall.AdicionarMusica(musica2);
-
 
 leall.AdidicionarAlbum(albumDoLeall);
 leall.ExibirDiscografia();
